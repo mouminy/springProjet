@@ -3,17 +3,17 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'mvn clean'
+        sh '/apps/maven/apache-maven-3.6.1/bin/mvn clean'
       }
     }
     stage('Test') {
       steps {
-        sh 'mvn test'
+        sh '/apps/maven/apache-maven-3.6.1/bin/mvn test'
       }
     }
     stage('Deploy') {
       steps {
-        sh 'mvn package'
+        sh '/apps/maven/apache-maven-3.6.1/bin/mvn package'
       }
     }
   }
